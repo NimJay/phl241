@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>PHL241</title>
+	
+	
+	<!-- Mobile Browser Toolbar Color -->
+	<!-- Chrome, Firefox OS and Opera --><meta name="theme-color" content="#00e678">
+	<!-- Windows Phone --><meta name="msapplication-navbutton-color" content="#00e678">
+	<!-- iOS Safari --><meta name="apple-mobile-web-app-status-bar-style" content="#00e678">
+	
+	<!-- Muli Google Font --><link href="https://fonts.googleapis.com/css?family=Muli" rel="stylesheet">
+	<link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/easy.css">
+	
+	<style>
+		body {
+			font-family: 'Muli', sans-serif;
+			margin: 0px;
+			padding: 0px;
+			color: rgb(30, 30, 30);
+			background-color: rgb(250, 250, 250);
+			background-image: url("img/background.png");
+			background-repeat: no-repeat;
+		}
+		
+		/* Overide easy.css */
+		.row {
+			max-width: 850px; 
+		}
+		div.col-1, div.col-1-2, div.col-1-3, div.col-2-3 {
+			padding: 0px;
+		}
+		
+		.col-2-3 {
+			vertical-align: top;
+		}
+		
+		header {
+			margin-top: 200px; 
+		}
+		section, nav {
+			margin-top: 60px; 
+		}
+		h1 {
+			font-size: 60px;
+		}
+		h2 {
+			font-size: 32px;
+			margin: 0px 0px 30px 0px;
+		}		
+		h3 {
+			font-size: 24px;
+			margin: 30px 0px 15px 0px;
+		}
+		h1, h2, h3 {
+			font-weight: normal;
+			line-height: 1.2em;
+		}
+		p, ol {
+			font-size: 20px;
+			margin: 10px 0px;
+			line-height: 1.5em;
+		}
+		em {
+			font-weight: bold;
+		}
+		strong {
+			color: #e6006e;
+			font-weight: bold;
+		}
+		a {
+			color: #00e678;
+			text-decoration: none;
+		}
+		sub {font-size: 0.8em;vertical-align: sub;}
+		sup {font-size: 0.8em;vertical-align: super;}
+		
+		ol {
+			
+		}
+		
+		nav li {
+			font-size: 24px;
+			line-height: 1.5em;
+		}
+		
+		main {
+			
+		}
+		
+		.img-col {
+			text-align: right;
+		}
+		@media (max-width: 600px) {
+			.img-col {
+				text-align: center;
+			}
+		}
+		
+		
+
+		/* --------- P R I N T -------- */
+
+
+		@media print {
+	
+			body {
+				background-color: white;
+			}
+			section, header, nav {
+				margin-top: 5px; 
+			}
+			h1 {font-size: 32px;margin: 8px 0px 0px 0px;line-height: 1.5em;}
+			h2 {font-size: 24px;margin: 8px 0px 8px 0px;line-height: 1.5em;}
+			h3 {font-size: 18px;margin: 8px 0px 2px 0px;line-height: 1.5em;}
+			
+			p, ol {
+				font-size: 14px;
+				margin: 5px 0px;
+				line-height: 1.5em;
+			}
+
+			nav li {
+				font-size: 20px;
+				line-height: 1.5em;
+			}
+		}
+		
+		
+		/* --------- S C R O L L   T O   T O P -------- */
+
+
+		#scrolltotop {
+			display: none;
+			font-size: 16px;
+			line-height: 1.5rem;
+			text-align: center;
+			max-width: 25%;
+			padding: 12px 15px;
+			position: fixed;
+			bottom: 4%;
+			right: 4%;
+			color: rgb(160, 160, 160);
+			background-color: rgb(220, 220, 220);
+			border-radius: 10px;
+			opacity: 0.5;
+			cursor: pointer;
+		}
+
+		#scrolltotop:hover {
+			opacity: 1;
+		}
+		
+	</style>
+	<script type="text/javascript">
+		var body, html;
+
+
+		/* ---------------- O N L O A D --------------- */
+
+
+		window.onload = function () {
+
+			// Globals.
+			html = document.documentElement;
+			body = document.body;
+
+			// [scroll to top] button.
+			var scrollToTopButton = document.getElementById('scrolltotop');
+
+			// Show/Hide [scroll to top] button accordingly.
+			window.onscroll = function (e) {
+				if (getScrollTop() > getWindowHeight() * 0.5) {
+					scrollToTopButton.style.display = "block";
+				} else {
+					scrollToTopButton.style.display = "none";
+				}
+			}
+
+			// Scroll to top.
+			scrollToTopButton.onclick = function (e) {
+				window.scrollTo(0, 0);
+			};
+		}
+
+
+		/**
+		 * Return the height of the document (full page).
+		 * Due to browser incompatibilties, the max of all possible variables is taken.
+		 */
+		function getDocumentHeight () {
+			return Math.max(body.scrollHeight, body.offsetHeight,
+							html.clientHeight, html.scrollHeight, html.offsetHeight);
+		}
+
+
+		// Return the scroll depth.
+		function getScrollTop () {
+			 return body.scrollTop || html.scrollTop;
+		}
+
+
+		// Return the height of the window.
+		function getWindowHeight () {
+			return window.innerHeight;
+		}
+	</script>
+</head>
+<body>
+	<main>
+		<header class="block">
+			<div class="row">
+				<div class="col-1">
+					<h1>PHL241</h1>
+				</div>
+			</div>
+		</header>
+		<nav class="block">
+			<div class="row">
+				<div class="col-1">
+					<h2>Table of Contents</h2>
+					<ol>
+						<li><a href="#what-is-this-document">What is this document?</a></li>
+						<li><a href="#terminology">Terminology</a></li>
+						<li><a href="#roderick-chisholm">Roderick Chisholm</a></li>
+						<li><a href="#peter-f-strawson">Peter F. Stawson</a></li>
+						<li><a href="#peter-van-inwagen">Peter van Inwagen</a></li>
+						<li><a href="#harry-frankfurt">Harry Frankfurt</a></li>
+						<li><a href="#about-me">About Me</a></li>
+					</ol>
+				</div>
+			</div>
+		</nav>
+		<section class="block" id="what-is-this-document">
+			<div class="row">
+				<div class="col-1">
+					<h2>What is this document?</h2>
+					<p>This document is mainly meant to <strong>help students of PHL241</strong> ("Freedom And Determinism"), a course offered at the University of Toronto Mississauga.</p>
+				</div>
+			</div>
+		</section>
+		<section class="block" id="terminology">
+			<div class="row">
+				<div class="col-1">
+					<h2>Terminology</h2>
+					<h3 id="free-will">Free Will</h3>
+					<p>When a person is able choose what (s)he does, we say that person has "free will".</p>
+					<h3 id="determinism">Determinism</h3>
+					<p>Determinism is the idea that <strong>the way things are along with the laws of nature fixes the way things will be in the future</strong>. In other words, everything has a cause, and that all events could be predicted (or "determined").</p>
+					<h3 id="incompatibilism">Incompatibilism</h3>
+					<p>Incompatibilism is the idea that <strong>if determinism is true, then a person doesn't actually have free will</strong>. In other words, determinism and free will are "incompatible".</p>
+					<h3 id="compatibilism">Compatibilism</h3>
+					<p>Compatibilism is the <em>opposite of Incompatibilism</em> and states that people can have free will even if determinism is true.</p>
+					<h3></h3>
+					<p></p>
+				</div>
+			</div>
+		</section>
+		<section class="block" id="roderick-chisholm">
+			<div class="row">
+				<div class="col-2-3">
+					<h2>Roderick Chisholm</h2>
+					<h3>"Human Freedom and the Self"</h3>
+					<p>.</p>
+				</div><!--
+				--><div class="col-1-3 img-col">
+					<img src="img/roderick_chisholm.png" alt="2D Graphic of Roderick Chisholm" />
+				</div>
+			</div>
+		</section>
+		<section class="block" id="peter-f-strawson">
+			<div class="row">
+				<div class="col-2-3">
+					<h2>Peter F. Strawson</h2>
+					<h3>"Freedom and Resentment"</h3>
+					<p>Stawson refers </p>
+				</div><!--
+				--><div class="col-1-3 img-col">
+					<img src="img/peter_f_strawson.png" alt="2D Graphic of Peter F. Strawson" />
+				</div>
+			</div>
+		</section>
+		<section class="block" id="peter-van-inwagen">
+			<div class="row">
+				<div class="col-2-3">
+					<h2>Peter van Inwagen</h2>
+					<h3>"The Incompatibility of Free Will and Determinism"</h3>
+					<p>The paper is an <strong>argument for incompatibilism</strong>, and is divided into 4 parts:</p>
+					<ol style="list-style-type: upper-roman;list-style-position: inside;">
+						<li>Definition of determinism</li>
+						<li>Definition of "can"</li>
+						<li>Argument for incompatibilism</li>
+						<li>More on "can"</li>
+					</ol>
+					<p>Note: The paper makes <em>no claims</em> about whether or not determinism is true.</p>
+				</div><!--
+				--><div class="col-1-3 img-col">
+					<img src="img/peter_van_inwagen.png" alt="2D Graphic of Peter van Inwagen" />
+				</div>
+				<div class="col-1">
+					<p>In part III, van Inwagen talks about a judge and a criminal on trial. If the judge raises his right hand, it means the judge thinks the criminal should be killed. A very simple summary of van Inwagen's argument: if the judge "can" render the statement "The judge raised his right hand" true, then he could have rendered the laws of nature false (but that's not possible); hence, determinism is incompatible with free will.</p>
+				</div>
+			</div>
+		</section>
+		<section class="block" id="harry-frankfurt">
+			<div class="row">
+				<div class="col-2-3">
+					<h2>Harry Frankfurt</h2>
+					<h3>The Principle Of Alternate Possibilities</h3>
+					<p>If a person is morally responsible, (s)he could have done otherwise.</p>
+				</div><!--
+				--><div class="col-1-3 img-col">
+					<img src="img/harry_frankfurt.png" alt="2D Graphic of Harry Frankfurt" />
+				</div>
+				<div class="col-1">
+					<h3>"Alternate Possibilities And Moral Responsibility"</h3>
+					<p>This paper argues that the <strong>principle of alternate possibilities is false</strong>. Towards the end of the paper, Frankfurt provides a <em>replacement</em> for the principle: if a person does X only because he could not have done otherwise, (s)he is not morally responsible. To set up his argument, Frankfurt presents four scenarios:</p>
+					<ol style="list-style-type: decimal;list-style-position: inside;">
+						<li>Jones<sub>1</sub></li>
+						<li>Jones<sub>2</sub></li>
+						<li>Jones<sub>3</sub></li>
+						<li>Jones<sub>4</sub> and Black</li>
+					</ol>
+					<img src="img/jones.png" alt="2D Graphic of Jones 1, 2, and 3, and Black" style="width: 100%;padding: 16px;">
+					<p><em>Jones<sub>1</sub></em> decides to do X. Someone threatens Jones<sub>1</sub> to do X. But Jones<sub>1</sub> doesn't care about the threat at all. Jones<sub>1</sub> acts on his initial decision to do X. Frankfurt states Jones<sub>1</sub> is morally responsible.</p>
+					<p><em>Jones<sub>2</sub></em> decides to do X. Someone threatens Jones<sub>2</sub> to do X. Jones<sub>2</sub> is "stampeded" to do X by the threat. In other words, Jones<sub>2</sub> is effected by the threat, and the threat becomes the reason he does X. Frankfurt states Jones<sub>2</sub> is <em>not</em> morally responsible.</p>
+					<p><em>Jones<sub>3</sub></em> decides to do X. Someone threatens Jones<sub>3</sub> to do X. Jones<sub>3</sub> is effected by the threat. In other words, if Jones<sub>3</sub>'s intial decision was not to do X, the threat would have forced him the do X. However, Jones<sub>3</sub> ends up doing X only because of his intial decision (not because of the threat). Frankfurt states Jones<sub>3</sub> is morally responsible.</p>
+					<p>In <em>Jones<sub>4</sub></em>'s scenario, a new character named <em>Black</em> is introduced. Black wants Jones<sub>4</sub> to do X, and is able to manipulate Jones<sub>4</sub> to do X. However, Black never has to take any action because Jones<sub>4</sub> does X.</p>
+					<p>Frankfurt argues that <strong>Jones<sub>4</sub>'s scenario disproves the principle of alternate possibilities</strong>.</p>
+				</div>
+			</div>
+		</section>
+		<section class="block" id="about-me">
+			<div class="row">
+				<div class="col-1">
+					<h2>About Me</h2>
+					<p>I took this course in <em>2017</em> (fall semester) during my 4<sup>th</sup> year as an undergrad specializing in <em>Computer Science</em>. I was motivated by striking realisation and questions about free will that had dawned on me during the prior years.</p>
+					<p><a href="http://www.philipclark.ca/" target="_blank">Philip Clark</a> was my professor...</p>
+					<h3>My View On Free Will</h3>
+					<p>...</p>
+				</div>
+			</div>
+		</section>
+	</main>
+	<aside id="scrolltotop">scroll to top</aside>
+</body>
+</html>
