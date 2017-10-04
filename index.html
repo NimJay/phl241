@@ -59,7 +59,7 @@
 			font-weight: normal;
 			line-height: 1.2em;
 		}
-		p, ol {
+		p, ol, ul {
 			font-size: 20px;
 			margin: 10px 0px;
 			line-height: 1.5em;
@@ -80,6 +80,18 @@
 		
 		ol {
 			
+		}
+		
+		table {
+			margin: 30px 0px;
+			font-size: 20px;
+		}
+		th {
+			background-color: rgb(30, 30, 30);
+			color: rgb(250, 250, 250);
+		}
+		th, td {
+			padding: 16px;
 		}
 		
 		nav li {
@@ -155,6 +167,7 @@
 		}
 		
 	</style>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript">
 		var body, html;
 
@@ -184,6 +197,15 @@
 			scrollToTopButton.onclick = function (e) {
 				window.scrollTo(0, 0);
 			};
+			
+			// Animate achor-link scroll.
+			$(document).on('click', 'a[href^="#"]', function (event) {
+				event.preventDefault();
+
+				$('html, body').animate({
+					scrollTop: $($.attr(this, 'href')).offset().top
+				}, 500);
+			});
 		}
 
 
@@ -264,7 +286,10 @@
 				<div class="col-2-3">
 					<h2>Roderick Chisholm</h2>
 					<h3>"Human Freedom and the Self"</h3>
-					<p>.</p>
+					<p>In this paper, Chisholm <strong>argues that determinism is false</strong>. He claims that there are human actions that science cannot predict: "there can be no science of a man".</p>
+					<p><strong>Transeunt causation</strong> (or event-causation) occurs when events are caused by <em>inanimate natural objects</em>.</p>
+					<p><strong>Immanent causation</strong> (or agent-causation) occurs when events are caused by <em>humans ("agents")</em>.</p>
+					<p>Note: The paper supports incompatibilism (that if determinism is true, responsibility makes no sense).</p>
 				</div><!--
 				--><div class="col-1-3 img-col">
 					<img src="img/roderick_chisholm.png" alt="2D Graphic of Roderick Chisholm" />
@@ -276,10 +301,49 @@
 				<div class="col-2-3">
 					<h2>Peter F. Strawson</h2>
 					<h3>"Freedom and Resentment"</h3>
-					<p>Stawson refers </p>
+					<p>In this paper, Strawson <strong>argues for compatibilism</strong>. He refers to compatibilists as "<em>optimists</em>", and incompatibilists as "<em>pessimists</em>".</p>
 				</div><!--
 				--><div class="col-1-3 img-col">
 					<img src="img/peter_f_strawson.png" alt="2D Graphic of Peter F. Strawson" />
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-1">
+					<p>Pessimists claim determinism and responsibility cannot coexist. Optimists argue that moral responsibility should exist even if determinism is true, because holding people responsible has <em>social benefits</em>.</p>
+					<p>Strawson states that social benefits are not a valid reason, and that optimists have to admit this (make a "<em>vital concession</em>"). He states that there is a "<em>lacuna</em>" (a gap) in their argument, and that optimists need to provide a better reason for holding people responsibile. Strawson attempts to provide a valid reason, and he states that pessimists must make a "<em>formal withdrawal</em>" by giving up the idea that determinism and responsibility cannot coexist.</p>
+					<p>Strawson identifies two kinds of attitudes humans can have: <em>reactive attitudes</em>; and <em>objective attitudes</em>. Reactive attitudes are attitudes towards humans that have free will.</p>
+					<table>
+						<thead>
+							<tr>
+								<th>Reactive Attitudes</th>
+								<th>Objective Attitudes</th>								
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>
+									<ul style="text-align: center;list-style-position: inside;list-style-type: disc;">
+										<li>Resentment</li>
+										<li>Gratitude</li>
+										<li>Anger</li>
+										<li>Forgiveness</li>
+										<li>The kind of love two adults can be said to feel</li>
+										<li>...</li>
+									</ul>
+								</td>
+								<td>
+									<ul style="text-align: center;list-style-position: inside;list-style-type: disc;">
+										<li>Fear</li>
+										<li>Repulsion</li>
+										<li>Pity</li>
+										<li>Horror</li>
+										<li>Some kinds of love (e.g., for a course)</li>
+										<li>...</li>
+									</ul>
+								</td>
+							</tr>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</section>
@@ -309,15 +373,20 @@
 			<div class="row">
 				<div class="col-2-3">
 					<h2>Harry Frankfurt</h2>
+					<p>Two of Frankfurt's papers are explored:</p>
+					<ol style="list-style-type: decimal;list-style-position: inside;">
+						<li><a href="#alternate-possibilities-and-moral-responsibility">"Alternate Possibilities And Moral Responsibility"</a></li>
+						<li><a href="#freedom-of-the-will-and-the-concept-of-a-person">"Freedom of the Will and the Concept of a Person"</a></li>
+					</ol>
 					<h3>The Principle Of Alternate Possibilities</h3>
 					<p>If a person is morally responsible, (s)he could have done otherwise.</p>
 				</div><!--
 				--><div class="col-1-3 img-col">
 					<img src="img/harry_frankfurt.png" alt="2D Graphic of Harry Frankfurt" />
 				</div>
-				<div class="col-1">
+				<div class="col-1" id="alternate-possibilities-and-moral-responsibility">
 					<h3>"Alternate Possibilities And Moral Responsibility"</h3>
-					<p>This paper argues that the <strong>principle of alternate possibilities is false</strong>. Towards the end of the paper, Frankfurt provides a <em>replacement</em> for the principle: if a person does X only because he could not have done otherwise, (s)he is not morally responsible. To set up his argument, Frankfurt presents four scenarios:</p>
+					<p>This paper argues that the <strong>principle of alternate possibilities is false</strong>. Towards the end of the paper, Frankfurt provides a <em>replacement</em> for the principle: if a person does X only because (s)he could not have done otherwise, (s)he is not morally responsible. To set up his argument, Frankfurt presents four scenarios:</p>
 					<ol style="list-style-type: decimal;list-style-position: inside;">
 						<li>Jones<sub>1</sub></li>
 						<li>Jones<sub>2</sub></li>
@@ -331,13 +400,21 @@
 					<p>In <em>Jones<sub>4</sub></em>'s scenario, a new character named <em>Black</em> is introduced. Black wants Jones<sub>4</sub> to do X, and is able to manipulate Jones<sub>4</sub> to do X. However, Black never has to take any action because Jones<sub>4</sub> does X.</p>
 					<p>Frankfurt argues that <strong>Jones<sub>4</sub>'s scenario disproves the principle of alternate possibilities</strong>.</p>
 				</div>
+				<div class="col-1" id="freedom-of-the-will-and-the-concept-of-a-person">
+					<h3>"Freedom of the Will and the Concept of a Person"</h3>
+					<p>In this paper, Frankfurt ...</p>
+					<p>A <em>first-order</em> desire is a desire to do an action. A <em>second-order desire</em> is a desire to have or not have other desires. <em>Second-order volitions</em> are a type of second-order desire: desires to have other desires effective. To explain what Frankfurt means by "effective", he talks about a physician.</p>
+					<p>A physician wants to better understand her patients' drug addictions; so, the physician desires the desire for drugs. The physician only wants to know what the desire for drugs feels like, and doesn't want to actually end up taking drugs. This is a second-order desire, but not a second-order volition.</p>
+					<p>A <em>wanton</em> is anything that may have first-order desires and second-order desires, but <em>not second-order volitions</em>. Frankfurt states that non-human animals, and very young children are examples of wantons.</p>
+					<p>Frankfurt <strong>defines a person</strong> as someone that <strong>can have second-order volitions</strong>.</p>
+				</div>
 			</div>
 		</section>
 		<section class="block" id="about-me">
 			<div class="row">
 				<div class="col-1">
 					<h2>About Me</h2>
-					<p>I took this course in <em>2017</em> (fall semester) during my 4<sup>th</sup> year as an undergrad specializing in <em>Computer Science</em>. I was motivated by striking realisation and questions about free will that had dawned on me during the prior years.</p>
+					<p>I took this course in <em>2017</em> (fall semester) during my 4<sup>th</sup> year as an undergrad specializing in <em>Computer Science</em>. I was motivated by striking realisations and questions about free will that had dawned on me during the prior years.</p>
 					<p><a href="http://www.philipclark.ca/" target="_blank">Philip Clark</a> was my professor...</p>
 					<h3>My View On Free Will</h3>
 					<p>...</p>
