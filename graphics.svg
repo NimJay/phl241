@@ -64,9 +64,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.62626456"
-     inkscape:cx="-479.95669"
-     inkscape:cy="2265.0389"
+     inkscape:zoom="0.31178836"
+     inkscape:cx="-151.99913"
+     inkscape:cy="49.216328"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -74,7 +74,7 @@
      inkscape:window-height="705"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
-     inkscape:window-maximized="0" />
+     inkscape:window-maximized="1" />
   <metadata
      id="metadata7">
     <rdf:RDF>
@@ -930,6 +930,35 @@
          inkscape:export-filename="C:\Users\Nim\Desktop\PHL241\img\background.png"
          inkscape:export-xdpi="90.269997"
          inkscape:export-ydpi="90.269997" />
+    </g>
+    <g
+       id="g4294"
+       inkscape:export-filename="C:\Users\Nim\Desktop\phl241\img\drug.png"
+       inkscape:export-xdpi="39.149109"
+       inkscape:export-ydpi="39.149109">
+      <rect
+         transform="matrix(0.86495464,0.50185005,-0.50185005,0.86495464,0,0)"
+         ry="95.806152"
+         y="931.31757"
+         x="937.46381"
+         height="191.6123"
+         width="496.59525"
+         id="rect4251"
+         style="opacity:1;fill:#d2d2d2;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
+      <rect
+         transform="matrix(0.86495464,0.50185005,-0.50185005,0.86495464,0,0)"
+         style="opacity:1;fill:#00e678;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+         id="rect4253"
+         width="316.16034"
+         height="191.6123"
+         x="1117.8987"
+         y="931.31757"
+         ry="95.806152" />
+      <path
+         inkscape:connector-curvature="0"
+         id="rect4255"
+         d="m 436.61196,1353.5447 c -37.76713,-21.9126 -73.44069,-30.4698 -79.98677,-19.1874 -6.54608,11.2824 18.58742,38.0057 56.35455,59.9183 l 128.39049,74.4927 88.62379,51.4198 c 37.76712,21.9127 73.4407,30.4699 79.98678,19.1875 6.54608,-11.2824 -18.58744,-38.0057 -56.35456,-59.9183 l -88.62379,-51.4199 -128.39049,-74.4927 z"
+         style="opacity:0.2;fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none;stroke-width:6;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
   </g>
 </svg>
